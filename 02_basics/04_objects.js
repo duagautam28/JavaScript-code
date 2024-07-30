@@ -48,8 +48,8 @@ const course={
 
 
 //json
-{
-    "coursename":"javaScript",
-    "price":"999",
-    "courseInstructor":"gautam" 
-}
+// {
+//     "coursename":"javaScript",
+//     "price":"999",
+//     "courseInstructor":"gautam" 
+// }
