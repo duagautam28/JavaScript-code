@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <ul id="animal">
+        <li><span id="lion">lion</span></li>
+        <li><span id="tiger">tiger</span></li>
+        <li><span id="beer">beer</span></li>
+        <li><span  id="owl">owl</span></li>
+        <li>crow</li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('animal').addEventListener('click',function(e){
+    //     console.log('clicked in ul');
+    // },false)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log('clicked on owl');
+    //     e.stopPropagation()
+    // },false)
+    //true->capturing
+    //false->bubbling
+    document.querySelector('#animal').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName!='LI'){
+            let removeIt=e.target.parentNode
+            removeIt.remove()
+        //removeIt.parentNode.removeChild(removeIt)
+        }
+        
+    },false)
+</script>
+</html>
